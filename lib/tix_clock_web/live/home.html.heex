@@ -1,0 +1,13 @@
+<div class="h-screen flex justify-center items-center">
+  <div class="h-1/4">
+    <div class="flex gap-9">
+      <%= for %{digit: digit, color: color} <- @time do %>
+        <div class={"grid gap-2 grid-cols-#{div(length(digit), 3)}"}>
+          <%= for is_on <- digit do %>
+            <div class={"h-11 w-11 rounded-md #{if is_on do "bg-#{color} shadow-#{color} shadow-glow" end}"} />
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
