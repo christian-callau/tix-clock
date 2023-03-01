@@ -9,14 +9,12 @@ module.exports = {
     "grid-cols-1",
     "grid-cols-2",
     "grid-cols-3",
-    "bg-green-400",
-    "bg-cyan-500",
     "bg-yellow-400",
     "bg-red-500",
-    "shadow-green-400",
-    "shadow-cyan-500",
+    "bg-white",
     "shadow-yellow-400",
     "shadow-red-500",
+    "shadow-white",
   ],
   theme: {
     extend: {
