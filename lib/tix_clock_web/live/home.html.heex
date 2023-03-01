@@ -1,21 +1,21 @@
-<div class="h-screen flex flex-col justify-center items-center">
-  <div class="h-1/3 flex items-center">
+<div class="h-screen flex flex-col justify-evenly items-center">
+  <div class="flex items-center">
     <div class="flex gap-9">
       <%= for {digit, color} <- @canada_time do %>
         <div class={"grid gap-2 grid-cols-#{div(length(digit), 3)}"}>
           <%= for is_on <- digit do %>
-            <div class={"h-11 w-11 rounded-md #{if is_on do "bg-#{color} shadow-#{color} shadow-glow" end}"} />
+            <div class={"w-6 h-6 md:h-11 md:w-11 rounded-md #{if is_on do "bg-#{color} shadow-#{color} shadow-glow" end}"} />
           <% end %>
         </div>
       <% end %>
     </div>
   </div>
-  <div class="h-1/3 flex items-center">
+  <div class="flex items-center">
     <div class="flex gap-9">
       <%= for {digit, color} <- @spain_time do %>
         <div class={"grid gap-2 grid-cols-#{div(length(digit), 3)}"}>
           <%= for is_on <- digit do %>
-            <div class={"h-11 w-11 rounded-md #{if is_on do "bg-#{color} shadow-#{color} shadow-glow" end}"} />
+            <div class={"w-6 h-6 md:h-11 md:w-11 rounded-md #{if is_on do "bg-#{color} shadow-#{color} shadow-glow" end}"} />
           <% end %>
         </div>
       <% end %>
