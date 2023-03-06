@@ -1,23 +1,23 @@
 <div class="h-screen flex flex-col justify-evenly items-center">
-  <div class="flex items-center">
-    <div class="flex gap-9">
-      <%= for {digit, color} <- @canada_time do %>
-        <div class={"grid gap-2 grid-cols-#{div(length(digit), 3)}"}>
-          <%= for is_on <- digit do %>
-            <div class={"w-6 h-6 md:h-11 md:w-11 rounded-md #{if is_on do "bg-#{color} shadow-#{color} shadow-glow" end}"} />
-          <% end %>
-        </div>
+  <div class="flex gap-4 md:gap-8">
+    <div class="grid gap-1 grid-cols-1">
+      <%= for show <- (Enum.at(@time, 0)) do %>
+        <div class={"w-7 h-7 md:h-14 md:w-14 #{if show, do: 'bg-red-500'}"} />
       <% end %>
     </div>
-  </div>
-  <div class="flex items-center">
-    <div class="flex gap-9">
-      <%= for {digit, color} <- @spain_time do %>
-        <div class={"grid gap-2 grid-cols-#{div(length(digit), 3)}"}>
-          <%= for is_on <- digit do %>
-            <div class={"w-6 h-6 md:h-11 md:w-11 rounded-md #{if is_on do "bg-#{color} shadow-#{color} shadow-glow" end}"} />
-          <% end %>
-        </div>
+    <div class="grid gap-1 grid-cols-3">
+      <%= for show <- (Enum.at(@time, 1)) do %>
+        <div class={"w-7 h-7 md:h-14 md:w-14 #{if show, do: 'bg-orange-500'}"} />
+      <% end %>
+    </div>
+    <div class="grid gap-1 grid-cols-2">
+      <%= for show <- (Enum.at(@time, 2)) do %>
+        <div class={"w-7 h-7 md:h-14 md:w-14 #{if show, do: 'bg-green-500'}"} />
+      <% end %>
+    </div>
+    <div class="grid gap-1 grid-cols-3">
+      <%= for show <- (Enum.at(@time, 3)) do %>
+        <div class={"w-7 h-7 md:h-14 md:w-14 #{if show, do: 'bg-cyan-500'}"} />
       <% end %>
     </div>
   </div>

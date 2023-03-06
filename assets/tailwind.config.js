@@ -5,27 +5,7 @@ const plugin = require("tailwindcss/plugin");
 
 module.exports = {
   content: ["./js/**/*.js", "../lib/*_web.ex", "../lib/*_web/**/*.*ex"],
-  safelist: [
-    "grid-cols-1",
-    "grid-cols-2",
-    "grid-cols-3",
-    "bg-yellow-400",
-    "bg-red-500",
-    "bg-white",
-    "shadow-yellow-400",
-    "shadow-red-500",
-    "shadow-white",
-  ],
-  theme: {
-    extend: {
-      colors: {
-        brand: "#FD4F00",
-      },
-      boxShadow: {
-        glow: "0 0 2px 3px var(--tw-shadow-color)",
-      },
-    },
-  },
+  theme: {},
   plugins: [
     require("@tailwindcss/forms"),
     plugin(({ addVariant }) =>
